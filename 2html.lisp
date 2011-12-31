@@ -49,7 +49,6 @@
 
 (defun txt-to-html (f1) 
   (with-open-file (out (createfile f1) :direction :output :if-exists :supersede)
-    (format out "<link rel=\"stylesheet\" href=\"/home/billy/css/style.css\" type=\"text/css\" />")
     (with-open-file (in f1)
       (loop for line = (read-line in nil)
 	 while line do (progn
